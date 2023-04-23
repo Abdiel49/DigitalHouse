@@ -16,6 +16,7 @@ const TextComponent = (props: TextComponentProps) => {
         props.grey && styles.greyColor,
         props.center && styles.centerText,
         props.bold && styles.boldText,
+        props.textWhite && styles.whiteColor,
         props.isUnderline && styles.underline,
         props.capitalize && styles.capitalize,
         props.style,
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   boldText: {
-    fontWeight: 'bold',
+    fontWeight: '800',
     // fontFamily: 'Poppins-Bold',
   },
   uppercase: {
@@ -63,5 +64,8 @@ const styles = StyleSheet.create({
   },
   capitalize: {
     textTransform: 'capitalize',
+  },
+  whiteColor: {
+    color: Colors.white,
   },
 });

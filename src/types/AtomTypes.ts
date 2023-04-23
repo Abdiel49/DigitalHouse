@@ -21,4 +21,5 @@ export interface TextComponentProps {
   isUnderline?: boolean;
   uppercase?: boolean;
   capitalize?: boolean;
+  textWhite?: boolean;
 }

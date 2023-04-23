@@ -62,12 +62,12 @@ export const gStyles = StyleSheet.create({
     gap: normalize(30),
   },
   background: {
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.background,
   },
   mainBackground: {
     flex: 1,
     justifyContent: 'space-between',
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.background,
   },
   spaceBetween: {
     justifyContent: 'space-between',

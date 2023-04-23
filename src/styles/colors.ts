@@ -6,6 +6,7 @@ export const Colors = {
   red: '#FF0000',
   purpleLight: '#CFD6FF',
   white: '#FFF',
+  background: '#F8F8F8',
 
   // old
   // black: '#000',
