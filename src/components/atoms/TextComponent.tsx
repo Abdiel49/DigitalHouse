@@ -17,6 +17,7 @@ const TextComponent = (props: TextComponentProps) => {
         props.center && styles.centerText,
         props.bold && styles.boldText,
         props.isUnderline && styles.underline,
+        props.capitalize && styles.capitalize,
         props.style,
       ]}>
       {props.text}

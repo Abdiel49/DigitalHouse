@@ -52,6 +52,15 @@ export const gStyles = StyleSheet.create({
     paddingBottom: normalize(60),
     paddingTop: normalize(10),
   },
+  gap10: {
+    gap: normalize(10),
+  },
+  gap20: {
+    gap: normalize(20),
+  },
+  gap30: {
+    gap: normalize(30),
+  },
   background: {
     backgroundColor: Colors.white,
   },
