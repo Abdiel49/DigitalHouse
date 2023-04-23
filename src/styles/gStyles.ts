@@ -48,6 +48,9 @@ export const gStyles = StyleSheet.create({
   },
   mainScreen: {
     flex: 1,
+    paddingHorizontal: normalize(20),
+    paddingBottom: normalize(60),
+    paddingTop: normalize(10),
   },
   background: {
     backgroundColor: Colors.white,
