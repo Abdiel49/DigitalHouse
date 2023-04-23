@@ -1,12 +1,8 @@
-import {Text, View} from 'react-native';
 import React from 'react';
+import AppNavigation from '@navigation/AppNavigation';
 
 const Main = () => {
-  return (
-    <View>
-      <Text>Main</Text>
-    </View>
-  );
+  return <AppNavigation />;
 };
 
 export default Main;
