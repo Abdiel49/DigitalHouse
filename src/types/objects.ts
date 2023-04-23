@@ -1,8 +1,8 @@
-export type Product = {
-  createdAt: Date;
-  name: string;
+export type ProductData = {
+  createdAt: string;
+  product: string;
   points: number;
   image: string;
-  isRedemption: boolean;
+  is_redemption: boolean;
   id: string;
 };

@@ -22,20 +22,20 @@ const Product = (props: ProductProps) => {
         />
       </View>
       <View style={styles.centerContent}>
-        <TextComponent text={props.product.name} bold medium alingLeft />
+        <TextComponent text={props.product.product} bold medium alingLeft />
         <TextComponent
-          text={props.product.createdAt.toLocaleDateString()}
+          text={new Date(props.product.createdAt).toLocaleDateString()}
           small
           alingLeft
         />
       </View>
       <View style={styles.pointsContent}>
         <TextComponent
-          text={props.product.isRedemption ? '-' : '+'}
+          text={props.product.is_redemption ? '-' : '+'}
           bold
           body
           style={
-            props.product.isRedemption ? styles.redColor : styles.greenColor
+            props.product.is_redemption ? styles.redColor : styles.greenColor
           }
         />
         <TextComponent text={props.product.points} bold body />

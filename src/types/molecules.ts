@@ -1,5 +1,5 @@
-import {Product} from './objects';
+import {ProductData} from './objects';
 
 export interface ProductProps {
-  product: Product;
+  product: ProductData;
 }
