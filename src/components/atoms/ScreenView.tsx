@@ -6,8 +6,7 @@ import {ScreenViewProps} from '@types';
 
 const ScreenView = (props: ScreenViewProps) => {
   return (
-    <SafeAreaView
-      style={[gStyles.mainScreen, gStyles.background, props.safeAreaStyle]}>
+    <SafeAreaView style={[gStyles.safeArea, props.safeAreaStyle]}>
       <ScrollView
         contentContainerStyle={[
           gStyles.mainScreen,

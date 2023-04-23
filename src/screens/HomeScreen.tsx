@@ -7,6 +7,8 @@ import PointsCart from '@components/molecules/PointsCart';
 import Products from '@components/organisms/Products';
 
 import {gStyles} from '@styles/gStyles';
+import ButtonComponent from '@components/atoms/ButtonComponent';
+import FilterButtons from '@components/molecules/FilterButtons';
 
 const HomeScreen = () => {
   const [products, setProducts] = useState(_products);
@@ -25,6 +27,7 @@ const HomeScreen = () => {
       </View>
       <TextComponent text={'TUS MOVIMIENTOS '} title grey uppercase />
       <Products products={products} />
+      <FilterButtons />
     </ScreenView>
   );
 };

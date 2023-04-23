@@ -46,10 +46,13 @@ export const gStyles = StyleSheet.create({
   pv: {
     paddingVertical: normalize(16),
   },
-  mainScreen: {
+  safeArea: {
     flex: 1,
+  },
+  mainScreen: {
+    // flex: 1,
     paddingHorizontal: normalize(20),
-    paddingBottom: normalize(60),
+    paddingBottom: normalize(20),
     paddingTop: normalize(10),
   },
   gap10: {
@@ -60,6 +63,9 @@ export const gStyles = StyleSheet.create({
   },
   gap30: {
     gap: normalize(30),
+  },
+  radius10: {
+    borderRadius: normalize(10),
   },
   background: {
     backgroundColor: Colors.background,

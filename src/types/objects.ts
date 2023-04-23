@@ -6,3 +6,5 @@ export type ProductData = {
   is_redemption: boolean;
   id: string;
 };
+
+export type ProductsFilterTypes = 'all' | 'winned' | 'exchanged';
