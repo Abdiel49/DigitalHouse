@@ -1,0 +1,24 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+      "paths": {
+        "@components/*": ["src/components/*"],
+        "@helpers/*": ["src/helpers/*"],
+        "@routes/*": ["src/routes/*"],
+        "@screens/*": ["src/screens/*"],
+        "@services/*": ["src/services/*"],
+        "@theme/*": ["src/theme/*"],
+        "@styles/*": ["src/styles/*"],
+        "@localStorage/*": ["src/localStorage/*"],
+        "@types": ["src/types/Types"],
+        "@environment/*": ["src/env/*"],
+        "@navigation/*": ["src/navigation/*"],
+        "@gStyles/*": ["src/styles/*"],
+        "@redux/*": ["src/redux/*"],
+        "@hooks/*": ["src/hooks/*"],
+        "@assets/*": ["src/assets/*"],
+        "@realmdb/*": ["src/realmdb/*"]
+      }
+  },
+}
