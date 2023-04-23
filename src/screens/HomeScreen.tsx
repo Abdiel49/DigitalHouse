@@ -1,11 +1,12 @@
-import {View, Text} from 'react-native';
+import {Text} from 'react-native';
 import React from 'react';
+import ScreenView from '@components/atoms/ScreenView';
 
 const HomeScreen = () => {
   return (
-    <View>
+    <ScreenView>
       <Text>HomeScreen</Text>
-    </View>
+    </ScreenView>
   );
 };
 
