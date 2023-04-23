@@ -13,6 +13,8 @@ export interface TextComponentProps {
   text: string | number;
   title?: boolean;
   body?: boolean;
+  medium?: boolean;
+  small?: boolean;
   grey?: boolean;
   center?: boolean;
   bold?: boolean;
@@ -22,4 +24,5 @@ export interface TextComponentProps {
   uppercase?: boolean;
   capitalize?: boolean;
   textWhite?: boolean;
+  alingLeft?: boolean;
 }

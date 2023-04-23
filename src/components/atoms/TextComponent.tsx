@@ -13,6 +13,8 @@ const TextComponent = (props: TextComponentProps) => {
         styles.text,
         props.title && styles.typeTitle,
         props.body && styles.typeBody,
+        props.medium && styles.mediumType,
+        props.small && styles.small,
         props.grey && styles.greyColor,
         props.center && styles.centerText,
         props.bold && styles.boldText,
@@ -46,6 +48,12 @@ const styles = StyleSheet.create({
     fontSize: normalize(15),
     fontWeight: '400',
   },
+  mediumType: {
+    fontSize: normalize(14),
+  },
+  small: {
+    fontSize: normalize(12),
+  },
   underline: {
     textDecorationLine: 'underline',
   },
@@ -67,5 +75,8 @@ const styles = StyleSheet.create({
   },
   whiteColor: {
     color: Colors.white,
+  },
+  alingLeft: {
+    textAlign: 'left',
   },
 });

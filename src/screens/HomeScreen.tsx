@@ -4,6 +4,7 @@ import ScreenView from '@components/atoms/ScreenView';
 import TextComponent from '@components/atoms/TextComponent';
 import {gStyles} from '@styles/gStyles';
 import PointsCart from '@components/molecules/PointsCart';
+import Products from '@components/organisms/Products';
 
 const HomeScreen = () => {
   return (
@@ -19,6 +20,7 @@ const HomeScreen = () => {
         <PointsCart mounth="Diciembre" points={10000} />
       </View>
       <TextComponent text={'TUS MOVIMIENTOS '} title grey uppercase />
+      <Products />
     </ScreenView>
   );
 };
