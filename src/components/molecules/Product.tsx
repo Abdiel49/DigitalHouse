@@ -15,14 +15,20 @@ const Product = (props: ProductProps) => {
     <TouchableOpacity
       style={[styles.content, gStyles.gap10]}
       activeOpacity={0.6}>
-      <View>
+      <View style={styles.imageContent}>
         <ImageComponent
           source={{uri: props.product.image}}
           style={styles.image}
         />
       </View>
       <View style={styles.centerContent}>
-        <TextComponent text={props.product.product} bold medium alingLeft />
+        <TextComponent
+          text={props.product.product}
+          numberOfLines={2}
+          bold
+          medium
+          alingLeft
+        />
         <TextComponent
           text={new Date(props.product.createdAt).toLocaleDateString()}
           small
@@ -53,6 +59,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
   },
+  imageContent: {
+    flexGrow: 1,
+    maxWidth: '16%',
+  },
   image: {
     width: normalize(55),
     height: normalize(55),
@@ -60,9 +70,16 @@ const styles = StyleSheet.create({
     borderRadius: normalize(10),
     overflow: 'hidden',
   },
-  centerContent: {},
+  centerContent: {
+    flexGrow: 1,
+    maxWidth: '53%',
+  },
   pointsContent: {
     flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    flexGrow: 1,
+    maxWidth: '24%',
   },
   greenColor: {
     color: Colors.green,

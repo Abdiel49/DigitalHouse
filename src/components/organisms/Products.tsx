@@ -7,7 +7,6 @@ import normalize from '@helpers/normalizeFontSize';
 
 import {Colors} from '@styles/colors';
 import {ProductsProps} from '@types';
-// import {ProductData} from '@types';
 
 const Products = (props: ProductsProps) => {
   return (
@@ -23,10 +22,12 @@ export default Products;
 
 const styles = StyleSheet.create({
   content: {
+    // flex: 1,
     gap: normalize(10),
     backgroundColor: Colors.white,
     paddingVertical: normalize(20),
     paddingHorizontal: normalize(10),
     borderRadius: normalize(10),
+    // maxHeight: '20%',
   },
 });

@@ -25,6 +25,7 @@ export interface TextComponentProps {
   capitalize?: boolean;
   textWhite?: boolean;
   alingLeft?: boolean;
+  numberOfLines?: number;
 }
 
 export interface ButtonComponentProps {
