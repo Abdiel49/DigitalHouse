@@ -49,7 +49,7 @@ const HomeScreen = (props: HomeScreenProps) => {
   }, [loadProducts]);
 
   return (
-    <ScreenView scrollStyle={gStyles.gap30}>
+    <ScreenView scrollStyle={[gStyles.gap30, gStyles.ap]}>
       <View style={gStyles.gap10}>
         <TextComponent text={'Bienvenido de vuelta!'} title />
         <TextComponent text={'Ruben Rodriguez'} body />

@@ -22,8 +22,10 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: Colors.purpleLight,
     width: '100%',
-    height: '20%',
-    justifyContent: 'center',
+    // height: '20%',
+    height: normalize(100),
+    justifyContent: 'flex-end',
     paddingHorizontal: normalize(20),
+    paddingVertical: normalize(24),
   },
 });
