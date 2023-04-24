@@ -7,14 +7,11 @@ import PointsCart from '@components/molecules/PointsCart';
 import Products from '@components/organisms/Products';
 import FilterButtons from '@components/molecules/FilterButtons';
 
-// import {useFetch} from '@hooks/useFetch';
+import {config} from '@config/appConfig';
+import {useFetch} from '@hooks/useFetch';
 
 import {gStyles} from '@styles/gStyles';
-import {useFetch} from '@hooks/useFetch';
 import {ProductData} from '@types';
-import {config} from '@config/appConfig';
-// import {ProductData} from '@types';
-// import {config} from '@config/appConfig';
 
 const HomeScreen = () => {
   const [products] = useFetch<ProductData[]>(config.productsApi);
