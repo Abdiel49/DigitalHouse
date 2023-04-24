@@ -1,8 +1,13 @@
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
+
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@navigation/AppNavigation';
+
+import {useAppSelector} from '@redux/hooks';
+
 import ScreenView from '@components/atoms/ScreenView';
+import TextComponent from '@components/atoms/TextComponent';
 
 type MotionDetailProps = NativeStackScreenProps<
   RootStackParamList,
@@ -10,9 +15,13 @@ type MotionDetailProps = NativeStackScreenProps<
 >;
 
 const MotionDetailScreen = () => {
+  const product = useAppSelector(state => state.products.currentProduct);
+
   return (
     <ScreenView>
-      <Text>MotionDetailScreen</Text>
+      <View>
+        <TextComponent text={product?.product || ''} />
+      </View>
     </ScreenView>
   );
 };
