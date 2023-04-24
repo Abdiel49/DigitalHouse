@@ -51,9 +51,18 @@ export const gStyles = StyleSheet.create({
   },
   mainScreen: {
     // flex: 1,
-    paddingHorizontal: normalize(20),
     paddingBottom: normalize(20),
+  },
+  ap: {
+    // paddingTop: normalize(10),
+    paddingHorizontal: normalize(20),
+    paddingVertical: normalize(10),
+  },
+  pt2: {
     paddingTop: normalize(10),
+  },
+  paddingHS: {
+    paddingHorizontal: normalize(20),
   },
   gap10: {
     gap: normalize(10),
@@ -93,5 +102,15 @@ export const gStyles = StyleSheet.create({
   spaceAround: {
     alignItems: 'center',
     justifyContent: 'space-around',
+  },
+  shadown1: {
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.18,
+    shadowRadius: 4.59,
+    elevation: 5,
   },
 });

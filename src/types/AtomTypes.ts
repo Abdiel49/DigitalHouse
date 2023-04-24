@@ -4,9 +4,13 @@ export interface ScreenViewProps {
   children?: React.ReactNode;
   scrollStyle?: StyleProp<ViewStyle>;
   safeAreaStyle?: StyleProp<ViewStyle>;
+  headerScroll?: () => React.ReactElement;
+  headerFixed?: () => React.ReactElement;
   endScrollChildren?: () => React.ReactElement;
   showLoading?: boolean;
   setShowLoading?: React.Dispatch<React.SetStateAction<boolean>>;
+  withMargiH?: boolean;
+  mt?: boolean;
 }
 
 export interface TextComponentProps {
