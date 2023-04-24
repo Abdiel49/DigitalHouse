@@ -26,3 +26,8 @@ export interface TextComponentProps {
   textWhite?: boolean;
   alingLeft?: boolean;
 }
+
+export interface ButtonComponentProps {
+  label: string;
+  onPress?: () => void;
+}

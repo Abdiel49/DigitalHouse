@@ -3,11 +3,7 @@ import React, {useState} from 'react';
 
 import ButtonComponent from '@components/atoms/ButtonComponent';
 
-import {ProductsFilterTypes} from '@types';
-
-export interface FilterButtonsProps {
-  onChangeFilter?: (filter: ProductsFilterTypes) => void;
-}
+import {FilterButtonsProps, ProductsFilterTypes} from '@types';
 
 const FilterButtons = (props: FilterButtonsProps) => {
   const [showFilter, setShowFilter] = useState<ProductsFilterTypes>('all');

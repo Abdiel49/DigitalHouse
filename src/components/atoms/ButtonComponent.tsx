@@ -3,13 +3,11 @@ import React from 'react';
 
 import TextComponent from './TextComponent';
 
-import {Colors} from '@styles/colors';
 import normalize from '@helpers/normalizeFontSize';
 
-export interface ButtonComponentProps {
-  label: string;
-  onPress?: () => void;
-}
+import {Colors} from '@styles/colors';
+import {ButtonComponentProps} from '@types';
+
 const ButtonComponent = (props: ButtonComponentProps) => {
   return (
     <TouchableOpacity

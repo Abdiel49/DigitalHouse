@@ -5,10 +5,9 @@ import ScreenView from '@components/atoms/ScreenView';
 import TextComponent from '@components/atoms/TextComponent';
 import PointsCart from '@components/molecules/PointsCart';
 import Products from '@components/organisms/Products';
+import FilterButtons from '@components/molecules/FilterButtons';
 
 import {gStyles} from '@styles/gStyles';
-import ButtonComponent from '@components/atoms/ButtonComponent';
-import FilterButtons from '@components/molecules/FilterButtons';
 
 const HomeScreen = () => {
   const [products, setProducts] = useState(_products);
