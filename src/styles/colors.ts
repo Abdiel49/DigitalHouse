@@ -3,9 +3,11 @@ export const Colors = {
   blue: '#334FFA',
   green: '#00B833',
   grey: '#9B9898',
+  grey2: '#D0D0D0',
   red: '#FF0000',
   purpleLight: '#CFD6FF',
   white: '#FFF',
+  background: '#F8F8F8',
 
   // old
   // black: '#000',
