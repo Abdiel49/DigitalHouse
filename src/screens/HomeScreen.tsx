@@ -1,8 +1,11 @@
 import {View} from 'react-native';
 import React, {useCallback, useEffect} from 'react';
 
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '@navigation/AppNavigation';
+
 import {useAppDispatch, useAppSelector} from '@redux/hooks';
-import {setAllProducts} from '@redux/slices';
+import {setAllProducts, setCurrentProduct} from '@redux/slices';
 
 import ScreenView from '@components/atoms/ScreenView';
 import TextComponent from '@components/atoms/TextComponent';
@@ -14,8 +17,14 @@ import {getProducts} from '@services/products';
 
 import {config} from '@config/appConfig';
 import {gStyles} from '@styles/gStyles';
+import {ProductData} from '@types';
 
-const HomeScreen = () => {
+type HomeScreenProps = NativeStackScreenProps<
+  RootStackParamList,
+  'HOME_SCREEN'
+>;
+
+const HomeScreen = (props: HomeScreenProps) => {
   const dispatch = useAppDispatch();
   const points = useAppSelector(state => state.products.totalPoints);
 
@@ -23,6 +32,11 @@ const HomeScreen = () => {
     const products = await getProducts(config.productsApi);
     dispatch(setAllProducts(products));
   }, [dispatch]);
+
+  const onSelectProduct = (product: ProductData) => {
+    dispatch(setCurrentProduct(product));
+    props.navigation.navigate('MOTION_DETAIL');
+  };
 
   useEffect(() => {
     let mounted = true;
@@ -47,7 +61,7 @@ const HomeScreen = () => {
         <PointsCart mounth="Diciembre" points={points} />
       </View>
       <TextComponent text={'TUS MOVIMIENTOS '} title grey uppercase />
-      <Products />
+      <Products onSelectOneProduct={onSelectProduct} />
       <FilterButtons />
     </ScreenView>
   );

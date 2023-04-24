@@ -8,14 +8,23 @@ import Product from '@components/molecules/Product';
 import normalize from '@helpers/normalizeFontSize';
 
 import {Colors} from '@styles/colors';
+import {ProductData} from '@types';
 
-const Products = () => {
+interface ProductsProps {
+  onSelectOneProduct: (product: ProductData) => void;
+}
+
+const Products = (props: ProductsProps) => {
   const {products} = useAppSelector(state => state.products);
+
+  const onSelectProduct = (product: ProductData) => {
+    props.onSelectOneProduct(product);
+  };
 
   return (
     <View style={styles.content}>
       {products.map(product => (
-        <Product key={product.id} product={product} />
+        <Product key={product.id} product={product} onPress={onSelectProduct} />
       ))}
     </View>
   );

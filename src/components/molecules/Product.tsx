@@ -11,10 +11,15 @@ import {gStyles} from '@styles/gStyles';
 import {ProductProps} from '@types';
 
 const Product = (props: ProductProps) => {
+  const onPress = () => {
+    props.onPress && props.onPress(props.product);
+  };
+
   return (
     <TouchableOpacity
       style={[styles.content, gStyles.gap10]}
-      activeOpacity={0.6}>
+      activeOpacity={0.6}
+      onPress={onPress}>
       <View style={styles.imageContent}>
         <ImageComponent
           source={{uri: props.product.image}}
