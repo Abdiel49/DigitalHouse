@@ -1,17 +1,20 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
 
+import {useAppSelector} from '@redux/hooks';
+
 import Product from '@components/molecules/Product';
 
 import normalize from '@helpers/normalizeFontSize';
 
 import {Colors} from '@styles/colors';
-import {ProductsProps} from '@types';
 
-const Products = (props: ProductsProps) => {
+const Products = () => {
+  const {products} = useAppSelector(state => state.products);
+
   return (
     <View style={styles.content}>
-      {props.products.map(product => (
+      {products.map(product => (
         <Product key={product.id} product={product} />
       ))}
     </View>

@@ -1,5 +1,8 @@
 import {View} from 'react-native';
-import React from 'react';
+import React, {useCallback, useEffect} from 'react';
+
+import {useAppDispatch, useAppSelector} from '@redux/hooks';
+import {setAllProducts} from '@redux/slices';
 
 import ScreenView from '@components/atoms/ScreenView';
 import TextComponent from '@components/atoms/TextComponent';
@@ -7,14 +10,29 @@ import PointsCart from '@components/molecules/PointsCart';
 import Products from '@components/organisms/Products';
 import FilterButtons from '@components/molecules/FilterButtons';
 
-import {config} from '@config/appConfig';
-import {useFetch} from '@hooks/useFetch';
+import {getProducts} from '@services/products';
 
+import {config} from '@config/appConfig';
 import {gStyles} from '@styles/gStyles';
-import {ProductData} from '@types';
 
 const HomeScreen = () => {
-  const [products] = useFetch<ProductData[]>(config.productsApi);
+  const dispatch = useAppDispatch();
+  const points = useAppSelector(state => state.products.totalPoints);
+
+  const loadProducts = useCallback(async () => {
+    const products = await getProducts(config.productsApi);
+    dispatch(setAllProducts(products));
+  }, [dispatch]);
+
+  useEffect(() => {
+    let mounted = true;
+    if (mounted) {
+      loadProducts();
+    }
+    return () => {
+      mounted = false;
+    };
+  }, [loadProducts]);
 
   return (
     <ScreenView scrollStyle={gStyles.gap30}>
@@ -26,10 +44,10 @@ const HomeScreen = () => {
         <TextComponent text={'TUS PUNTOS'} title grey uppercase />
       </View>
       <View style={gStyles.center}>
-        <PointsCart mounth="Diciembre" points={10000} />
+        <PointsCart mounth="Diciembre" points={points} />
       </View>
       <TextComponent text={'TUS MOVIMIENTOS '} title grey uppercase />
-      <Products products={products || []} />
+      <Products />
       <FilterButtons />
     </ScreenView>
   );
