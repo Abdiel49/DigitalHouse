@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import HomeScreen from '@screens/HomeScreen';
 import MotionDetailScreen from '@screens/MotionDetailScreen';
+// import Header from '@components/molecules/Header';
 
 export type RootStackParamList = {
   HOME_SCREEN: undefined;
