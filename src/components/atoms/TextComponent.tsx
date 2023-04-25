@@ -9,6 +9,7 @@ import {TextComponentProps} from '@types';
 const TextComponent = (props: TextComponentProps) => {
   return (
     <Text
+      {...props}
       numberOfLines={props.numberOfLines}
       style={[
         styles.text,

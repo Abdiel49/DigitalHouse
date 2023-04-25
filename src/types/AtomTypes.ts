@@ -21,7 +21,7 @@ export interface ScreenViewProps {
   mt?: boolean;
 }
 
-export interface TextComponentProps {
+export interface TextComponentProps extends TextProps {
   text: string | number;
   title?: boolean;
   body?: boolean;
