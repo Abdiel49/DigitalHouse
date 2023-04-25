@@ -5,6 +5,7 @@ import {
   StyleProp,
   TextProps,
   TextStyle,
+  TouchableOpacityProps,
   ViewStyle,
 } from 'react-native/types';
 
@@ -40,7 +41,7 @@ export interface TextComponentProps extends TextProps {
   numberOfLines?: number;
 }
 
-export interface ButtonComponentProps {
+export interface ButtonComponentProps extends TouchableOpacityProps {
   label: string;
   onPress?: () => void;
 }

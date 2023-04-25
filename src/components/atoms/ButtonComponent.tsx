@@ -11,9 +11,10 @@ import {ButtonComponentProps} from '@types';
 const ButtonComponent = (props: ButtonComponentProps) => {
   return (
     <TouchableOpacity
+      testID="ButtonComponent"
+      {...props}
       onPress={props.onPress}
       activeOpacity={0.6}
-      testID="ButtonComponent"
       style={styles.button}>
       <TextComponent text={props.label} textWhite bold medium center />
     </TouchableOpacity>

@@ -5,7 +5,11 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@navigation/AppNavigation';
 
 import {useAppDispatch, useAppSelector} from '@redux/hooks';
-import {setAllProducts, setCurrentProduct} from '@redux/slices';
+import {
+  filterProductsByRedemtion,
+  setAllProducts,
+  setCurrentProduct,
+} from '@redux/slices';
 
 import ScreenView from '@components/atoms/ScreenView';
 import TextComponent from '@components/atoms/TextComponent';
@@ -17,7 +21,7 @@ import {getProducts} from '@services/products';
 
 import {config} from '@config/appConfig';
 import {gStyles} from '@styles/gStyles';
-import {ProductData} from '@types';
+import {ProductData, ProductsFilterTypes} from '@types';
 
 type HomeScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -36,6 +40,10 @@ const HomeScreen = (props: HomeScreenProps) => {
   const onSelectProduct = (product: ProductData) => {
     dispatch(setCurrentProduct(product));
     props.navigation.navigate('MOTION_DETAIL');
+  };
+
+  const handleChangeFilter = (filterType: ProductsFilterTypes) => {
+    dispatch(filterProductsByRedemtion(filterType));
   };
 
   useEffect(() => {
@@ -62,7 +70,7 @@ const HomeScreen = (props: HomeScreenProps) => {
       </View>
       <TextComponent text={'TUS MOVIMIENTOS '} title grey uppercase />
       <Products onSelectOneProduct={onSelectProduct} />
-      <FilterButtons />
+      <FilterButtons onChangeFilter={handleChangeFilter} />
     </ScreenView>
   );
 };
