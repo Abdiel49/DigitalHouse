@@ -4,8 +4,6 @@ import {ScrollView} from 'react-native';
 import {ScreenViewProps} from '@types';
 import ScreenView from '@components/atoms/ScreenView';
 import TextComponent from '@components/atoms/TextComponent';
-// import { StyleProp, ViewStyle } from 'react-native';
-// import {ScreenView, ScreenViewProps} from './ScreenView';
 
 // Mock para las funciones callback
 const mockHeaderScroll = jest.fn();
