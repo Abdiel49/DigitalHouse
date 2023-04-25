@@ -1,14 +1,14 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import {Colors} from '@styles/colors';
+
 import TextComponent from '@components/atoms/TextComponent';
+
 import normalize from '@helpers/normalizeFontSize';
 import {formatNumber} from '@helpers/numberTools';
 
-type PointsCartProps = {
-  mounth: string;
-  points: number;
-};
+import {Colors} from '@styles/colors';
+import {PointsCartProps} from '@types';
+
 const PointsCart = (props: PointsCartProps) => {
   return (
     <View style={styles.content}>
