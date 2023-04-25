@@ -13,6 +13,7 @@ const ButtonComponent = (props: ButtonComponentProps) => {
     <TouchableOpacity
       onPress={props.onPress}
       activeOpacity={0.6}
+      testID="ButtonComponent"
       style={styles.button}>
       <TextComponent text={props.label} textWhite bold medium center />
     </TouchableOpacity>

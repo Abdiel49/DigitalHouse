@@ -1,4 +1,12 @@
-import {StyleProp, TextProps, TextStyle, ViewStyle} from 'react-native/types';
+import {
+  ImageProps,
+  ImageSourcePropType,
+  ImageStyle,
+  StyleProp,
+  TextProps,
+  TextStyle,
+  ViewStyle,
+} from 'react-native/types';
 
 export interface ScreenViewProps {
   children?: React.ReactNode;
@@ -35,4 +43,9 @@ export interface TextComponentProps {
 export interface ButtonComponentProps {
   label: string;
   onPress?: () => void;
+}
+
+export interface ImageComponentProps extends ImageProps {
+  source: ImageSourcePropType;
+  style?: StyleProp<ImageStyle>;
 }

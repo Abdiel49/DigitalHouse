@@ -1,24 +1,14 @@
-import {
-  Image,
-  ImageProps,
-  ImageSourcePropType,
-  ImageStyle,
-  StyleProp,
-  StyleSheet,
-} from 'react-native';
+import {Image, StyleSheet} from 'react-native';
 import React from 'react';
 
 import normalize from '@helpers/normalizeFontSize';
-
-interface ImageComponentProps extends ImageProps {
-  source: ImageSourcePropType;
-  style?: StyleProp<ImageStyle>;
-}
+import {ImageComponentProps} from '@types';
 
 const ImageComponent = (props: ImageComponentProps) => {
   return (
     <Image
       {...props}
+      testID="imageComponent"
       source={props.source}
       style={[styles.image, props.style]}
       resizeMode={props.resizeMode || 'contain'}
