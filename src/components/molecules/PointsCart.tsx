@@ -13,9 +13,14 @@ const PointsCart = (props: PointsCartProps) => {
   return (
     <View style={styles.content}>
       <View style={styles.mounthContainer}>
-        <TextComponent text={props.mounth} style={styles.mounthText} />
+        <TextComponent
+          testID="mounth"
+          text={props.mounth}
+          style={styles.mounthText}
+        />
       </View>
       <TextComponent
+        testID="points"
         text={`${formatNumber(props.points)} pts.`}
         style={styles.pointsText}
         center
