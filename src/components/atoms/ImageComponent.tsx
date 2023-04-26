@@ -7,8 +7,8 @@ import {ImageComponentProps} from '@types';
 const ImageComponent = (props: ImageComponentProps) => {
   return (
     <Image
-      {...props}
       testID="imageComponent"
+      {...props}
       source={props.source}
       style={[styles.image, props.style]}
       resizeMode={props.resizeMode || 'contain'}

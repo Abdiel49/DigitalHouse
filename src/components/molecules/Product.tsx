@@ -22,12 +22,14 @@ const Product = (props: ProductProps) => {
       onPress={onPress}>
       <View style={styles.imageContent}>
         <ImageComponent
+          testID="productImage"
           source={{uri: props.product.image}}
           style={styles.image}
         />
       </View>
       <View style={styles.centerContent}>
         <TextComponent
+          testID="productName"
           text={props.product.product}
           numberOfLines={2}
           bold
@@ -35,6 +37,7 @@ const Product = (props: ProductProps) => {
           alingLeft
         />
         <TextComponent
+          testID="productDate"
           text={new Date(props.product.createdAt).toLocaleDateString()}
           small
           alingLeft
@@ -43,13 +46,19 @@ const Product = (props: ProductProps) => {
       <View style={styles.pointsContent}>
         <TextComponent
           text={props.product.is_redemption ? '-' : '+'}
+          testID="redemtionType"
           bold
           body
           style={
             props.product.is_redemption ? styles.redColor : styles.greenColor
           }
         />
-        <TextComponent text={props.product.points} bold body />
+        <TextComponent
+          testID="productPoints"
+          text={props.product.points}
+          bold
+          body
+        />
         <TextComponent text={' >'} bold body />
       </View>
     </TouchableOpacity>
