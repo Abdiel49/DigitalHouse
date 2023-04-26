@@ -1,21 +1,26 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import {Colors} from '@styles/colors';
+
 import TextComponent from '@components/atoms/TextComponent';
+
 import normalize from '@helpers/normalizeFontSize';
 import {formatNumber} from '@helpers/numberTools';
 
-type PointsCartProps = {
-  mounth: string;
-  points: number;
-};
+import {Colors} from '@styles/colors';
+import {PointsCartProps} from '@types';
+
 const PointsCart = (props: PointsCartProps) => {
   return (
     <View style={styles.content}>
       <View style={styles.mounthContainer}>
-        <TextComponent text={props.mounth} style={styles.mounthText} />
+        <TextComponent
+          testID="mounth"
+          text={props.mounth}
+          style={styles.mounthText}
+        />
       </View>
       <TextComponent
+        testID="points"
         text={`${formatNumber(props.points)} pts.`}
         style={styles.pointsText}
         center

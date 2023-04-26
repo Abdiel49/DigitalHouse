@@ -1,4 +1,13 @@
-import {StyleProp, TextProps, TextStyle, ViewStyle} from 'react-native/types';
+import {
+  ImageProps,
+  ImageSourcePropType,
+  ImageStyle,
+  StyleProp,
+  TextProps,
+  TextStyle,
+  TouchableOpacityProps,
+  ViewStyle,
+} from 'react-native/types';
 
 export interface ScreenViewProps {
   children?: React.ReactNode;
@@ -13,7 +22,7 @@ export interface ScreenViewProps {
   mt?: boolean;
 }
 
-export interface TextComponentProps {
+export interface TextComponentProps extends TextProps {
   text: string | number;
   title?: boolean;
   body?: boolean;
@@ -32,7 +41,12 @@ export interface TextComponentProps {
   numberOfLines?: number;
 }
 
-export interface ButtonComponentProps {
+export interface ButtonComponentProps extends TouchableOpacityProps {
   label: string;
   onPress?: () => void;
+}
+
+export interface ImageComponentProps extends ImageProps {
+  source: ImageSourcePropType;
+  style?: StyleProp<ImageStyle>;
 }

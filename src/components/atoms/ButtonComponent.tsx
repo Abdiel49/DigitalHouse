@@ -11,6 +11,8 @@ import {ButtonComponentProps} from '@types';
 const ButtonComponent = (props: ButtonComponentProps) => {
   return (
     <TouchableOpacity
+      testID="ButtonComponent"
+      {...props}
       onPress={props.onPress}
       activeOpacity={0.6}
       style={styles.button}>

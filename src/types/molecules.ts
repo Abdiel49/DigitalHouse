@@ -8,3 +8,8 @@ export interface ProductProps {
 export interface FilterButtonsProps {
   onChangeFilter?: (filter: ProductsFilterTypes) => void;
 }
+
+export type PointsCartProps = {
+  mounth: string;
+  points: number;
+};
