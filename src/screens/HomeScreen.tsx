@@ -56,8 +56,18 @@ const HomeScreen = (props: HomeScreenProps) => {
     };
   }, [loadProducts]);
 
+  const renterBottomButtons = () => {
+    return (
+      <View style={[gStyles.mb2, gStyles.mh2]}>
+        <FilterButtons onChangeFilter={handleChangeFilter} />
+      </View>
+    );
+  };
+
   return (
-    <ScreenView scrollStyle={[gStyles.gap30, gStyles.ap]}>
+    <ScreenView
+      scrollStyle={[gStyles.gap30, gStyles.ap]}
+      endScrollChildren={renterBottomButtons}>
       <View style={gStyles.gap10}>
         <TextComponent text={'Bienvenido de vuelta!'} title />
         <TextComponent text={'Ruben Rodriguez'} body />
